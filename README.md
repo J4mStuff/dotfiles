@@ -1,1 +1,6 @@
- 
+1. CLONE THIS INTO ~/
+2. INSTALL STOW
+3. RUN `stow .`
+4. ...
+5. PROFIT
+
