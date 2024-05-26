@@ -2,4 +2,7 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  -- Set tab to 4 spaces
+  vim.cmd 'set shiftwidth=4 smarttab tabstop=4',
+}

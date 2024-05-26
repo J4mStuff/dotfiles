@@ -3,8 +3,17 @@
 iDIR="$HOME/.config/mako/icons"
 
 get_sink(){
-	sink=$(pactl list short sinks | grep alsa | grep RUNNING | awk '{print $1}')
-	echo "$sink"
+	sinks=$(pactl list short sinks | grep alsa | awk '{print $1, $7}')
+
+	runningSink=$(echo "$sinks" | grep "RUNNING" | head -n 1 | awk '{print $1}')
+	
+	if [ -n "$runningSink" ]
+	then
+		echo "$runningSink"
+	else
+		firstSink=$(echo "$sinks" | head -n 1 | awk '{print $1}')
+		echo "$firstSink"
+	fi
 }
 
 get_volume_with_icon(){
@@ -112,6 +121,8 @@ elif [[ "$1" == "--mic-inc" ]]; then
 	inc_mic_volume
 elif [[ "$1" == "--mic-dec" ]]; then
 	dec_mic_volume
+elif [[ "$1" == "--get-sink" ]]; then
+	get_sink
 else
 	get_volume
 fi
