@@ -81,6 +81,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='lsd'
 alias grep='rg'
 alias update="sudo pacman -Syu; yay -Syu; flatpak upgrade"
+alias cat='bat'
 
 # Shell integrations
 eval "$(fzf --zsh)"
