@@ -11,30 +11,20 @@
 		"margin-right": 10,
 
 		"modules-left": [
-			//"hyprland/workspaces", 
 			"cpu", 
 			"temperature", 
 			"memory",
-			//"disk", 
 			"custom/weather",
 			],
 		  
 		"modules-center": [
-			//"custom/menu", 
 			"clock"
-			//"custom/cycle_wall",
-			//"custom/light_dark",
-			//"custom/lock", 	
 			], 
 
 		"modules-right": [
-			//"hyprland/window", 
 			"tray", 
-			//"battery", 
 			"backlight",
-			//"pulseaudio",
 			"custom/audio",
-			//"wireplumber", 
 			"pulseaudio#microphone", 
 			"custom/power",
 			],
