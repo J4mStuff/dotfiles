@@ -3,8 +3,5 @@ duration = "30m"
 mode = "center"
 sorting = "ascending"
 
-[DP-1]
+[any]
 path = "/home/n3kk/Pictures/tapety/16-9"
-
-[DP-2]
-path = "/home/n3kk/Pictures/tapety/16-9/Desktop 2.png"
