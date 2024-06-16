@@ -1,6 +1,3 @@
-1. CLONE THIS INTO ~/
-2. INSTALL STOW
-3. RUN `stow .`
-4. ...
-5. PROFIT
+```sudo pacman -S stow```
 
+```git clone git@github.com:J4mStuff/dotfiles.git ~/dotfiles && stow ~/dotfiles/.```
