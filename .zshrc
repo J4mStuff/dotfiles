@@ -1,6 +1,3 @@
-#flex
-#  fastfetch
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -74,19 +71,24 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza $realpath'
 
-# Aliases
-alias ls='lsd'
+#---RipGrep---
 alias grep='rg'
-alias update="sudo pacman -Syu; yay -Syu"
-alias cat='bat'
 
-# Shell integrations
+#---Eza---
+alias ls='eza --icons=always -1'
+
+#---FZF---
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-eval "$(thefuck --alias)"
 
-#exports
+#---TheFuck---
+eval "$(thefuck --alias)"
+eval "$(thefuck --alias fk)"
+
+#---Zoxide---
+eval "$(zoxide init --cmd cd zsh)"
+
+#---DefaultApps---
 export EDITOR="nvim"
