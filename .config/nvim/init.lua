@@ -742,6 +742,7 @@ require('lazy').setup {
   --   end,
   -- },
 
+  -- theme setup
   {
     'scottmckendry/cyberdream.nvim',
     lazy = false,
@@ -753,7 +754,7 @@ require('lazy').setup {
         italic_comments = true,
         hide_fillchars = true,
         borderless_telescope = true,
-        terminal_colors = true,
+        terminal_colors = false,
       }
       vim.cmd 'colorscheme cyberdream' -- set the colorscheme
     end,
