@@ -544,6 +544,15 @@ require('lazy').setup {
         -- tsserver = {},
         --
 
+        zls = {
+          cmd = { '/usr/bin/zls' },
+          settings = {
+            zls = {
+              zig_exe_path = '/usr/bin/zig',
+            },
+          },
+        },
+
         lua_ls = {
           -- cmd = {...},
           -- filetypes { ...},
