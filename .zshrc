@@ -92,3 +92,5 @@ eval "$(zoxide init --cmd cd zsh)"
 
 #---DefaultApps---
 export EDITOR="nvim"
+export ELECTRON_OZONE_PLATFORM_HINT="wayland"
+alias du='duf'
