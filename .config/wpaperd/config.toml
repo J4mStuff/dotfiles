@@ -1,7 +1,8 @@
 [default]
 duration = "30m"
 mode = "center"
-sorting = "ascending"
+sorting = "random"
+queue-size = 20
 
 [any]
 path = "/home/n3kk/Pictures/tapety/16-9"
