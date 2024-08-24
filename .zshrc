@@ -93,7 +93,6 @@ eval "$(zoxide init --cmd cd zsh)"
 #---DefaultApps---
 export EDITOR="nvim"
 export ELECTRON_OZONE_PLATFORM_HINT="wayland"
-alias du='duf'
 
 #alias test='f() { xdg-open $(pwd)/$1 };f'
 alias open='f() { xdg-open $1 >/dev/null &};f'
