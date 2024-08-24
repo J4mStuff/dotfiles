@@ -1,9 +1,9 @@
-[submodule ".config/ranger/plugins/devicons2"]
-	path = .config/ranger/plugins/devicons2
-	url = https://github.com/cdump/ranger-devicons2
-[submodule ".config/ranger/plugins/zoxide"]
-	path = .config/ranger/plugins/zoxide
-	url = git@github.com:jchook/ranger-zoxide.git
-[submodule ".config/ranger/colorschemes/drakula"]
-	path = .config/ranger/colorschemes/drakula
-	url = https://github.com/dracula/ranger.git
+[submodule "dot-config/ranger/plugins/devicons2"]
+	path = dot-config/ranger/plugins/devicons2
+    url = https://github.com/cdump/ranger-devicons2
+[submodule "dot-config/ranger/plugins/zoxide"]
+    path = dot-config/ranger/plugins/zoxide
+    url = git@github.com:jchook/ranger-zoxide.git
+[submodule "dot-config/ranger/colorschemes/drakula"]
+    path = dot-config/ranger/colorschemes/drakula
+    url = https://github.com/dracula/ranger.git
