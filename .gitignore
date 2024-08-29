@@ -1,2 +1,5 @@
 #monitors to be overriden manually
 dot-config/hypr/configs/monitors.conf
+dot-config/user-*
+dot-config/dconf
+dot-config/dconf/*
