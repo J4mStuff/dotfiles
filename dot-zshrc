@@ -75,9 +75,6 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza $realpath'
 
-#---RipGrep---
-alias grep='rg'
-
 #---Eza---
 alias ls='eza --icons=always -1'
 
