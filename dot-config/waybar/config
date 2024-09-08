@@ -19,6 +19,7 @@
 	],
 	"modules-right": [
 		"tray",
+		"battery",
 		"backlight",
 		"custom/audio",
 		"pulseaudio#microphone",
