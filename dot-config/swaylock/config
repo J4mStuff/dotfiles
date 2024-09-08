@@ -1,6 +1,5 @@
 ignore-empty-password
-font=Ubuntu Mono Nerd Font
-
+font=Mononoki Nerd Font
 clock
 timestr=%R
 
