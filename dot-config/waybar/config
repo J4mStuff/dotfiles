@@ -1,28 +1,28 @@
 {
-	"include": "~/.config/waybar/modules",
-	"layer": "bottom",
-	"position": "top",
-	"exclusive": true,
-	"passthrough": false,
-	"spacing": 3,
-	"fixed-center": true,
-	"ipc": true,
-	"margin-left": 10,
-	"margin-right": 10,
-	"modules-left": [
-		"cpu",
-		"temperature",
-		"memory"
-	],
-	"modules-center": [
-		"clock"
-	],
-	"modules-right": [
-		"tray",
-		"battery",
-		"backlight",
-		"custom/audio",
-		"pulseaudio#microphone",
-		"custom/power"
-	]
+  "include": "~/.config/waybar/modules",
+  "layer": "bottom",
+  "position": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "spacing": 3,
+  "fixed-center": true,
+  "ipc": true,
+  "margin-left": 10,
+  "margin-right": 10,
+  "modules-left": [
+    "cpu",
+    "temperature",
+    "memory"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "tray",
+    "battery",
+    "backlight",
+    "custom/audio",
+    "pulseaudio#microphone",
+    "custom/power"
+  ]
 }
