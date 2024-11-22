@@ -4,3 +4,5 @@ dot-config/user-*
 dot-config/dconf
 dot-config/dconf/*
 dot-config/deluge
+
+dot-config/thefuck/__pycache__
