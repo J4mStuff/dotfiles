@@ -4,6 +4,11 @@ then
     tmux attach -t TMUX || tmux new -s TMUX
 fi
 
+# set PATH so it includes user's private ~/.local/bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -99,3 +104,4 @@ export EDITOR="nvim"
 
 #alias test='f() { xdg-open $(pwd)/$1 };f'
 alias open='f() { xdg-open $1 >/dev/null &};f'
+alias poe2exchange="~/.local/bin/Exiled-Exchange.AppImage </dev/null &>/dev/null &; sleep 2; netstat -tunlp | grep exiled | tr \":\" \"\\t\" | awk '{x=\"librewolf localhost:\"\$5; system(x)}'"
