@@ -1,0 +1,25 @@
+#abbreviation manager `abbr help`
+olets/zsh-abbr kind:defer
+
+#syntax highlighting
+zsh-users/zsh-syntax-highlighting kind:defer
+
+#fzf for suggestions
+Aloxaf/fzf-tab kind:defer
+
+#suggestions based on history
+zsh-users/zsh-autosuggestions kind:defer
+
+#fzf for auto completion lookups
+Aloxaf/fzf-tab kind:defer
+
+# oh-my-zsh stuff
+getantidote/use-omz
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+
+# Polishing edges
+belak/zsh-utils path:history
+belak/zsh-utils path:prompt
+belak/zsh-utils path:utility
+belak/zsh-utils path:completion
