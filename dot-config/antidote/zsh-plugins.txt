@@ -10,9 +10,6 @@ Aloxaf/fzf-tab kind:defer
 #suggestions based on history
 zsh-users/zsh-autosuggestions kind:defer
 
-#fzf for auto completion lookups
-Aloxaf/fzf-tab kind:defer
-
 # oh-my-zsh stuff
 getantidote/use-omz
 ohmyzsh/ohmyzsh path:lib
