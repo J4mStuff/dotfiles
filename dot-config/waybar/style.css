@@ -70,7 +70,7 @@ window#waybar {
     border-color: #81a1c1;
 }
 
-#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #backlight, #network, #pulseaudio, #tray, #window,#custom-launcher,#custom-power,#custom-updates ,#custom-network_traffic,#custom-weather{
+#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #backlight, #network, #pulseaudio, #tray, #window,#custom-launcher,#custom-power,#custom-updates ,#custom-network_traffic,#custom-weather,#custom-media{
     padding: 0 3px;
     border-bottom: 2px;
     border-style: solid;
@@ -181,5 +181,9 @@ window#waybar {
 #custom-network_traffic{
    color:#d08770;
 }
-
-  
+#privacy{
+    color:#d08770;
+}
+#custom-media {
+    color: rgb(102, 220, 105);
+}
