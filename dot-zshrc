@@ -92,3 +92,5 @@ alias ls='eza --icons=always -1'
 alias update_all='sudo pacman -Syu;yay -Syu;flatpak update;antidote update'
 alias open='f() { xdg-open $1 >/dev/null &};f'
 alias poe2exchange="~/.local/bin/Exiled-Exchange.AppImage </dev/null &>/dev/null &; sleep 2; netstat -tunlp | grep exiled | tr \":\" \"\\t\" | awk '{x=\"librewolf localhost:\"\$5; system(x)}'"
+
+export PATH=$PATH:/home/n3kk/.spicetify

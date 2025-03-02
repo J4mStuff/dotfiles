@@ -246,16 +246,11 @@
   },
   "privacy": {
     "icon-spacing": 4,
-    "icon-size": 18,
+    "icon-size": 17,
     "transition-duration": 250,
     "modules": [
       {
         "type": "screenshare",
-        "tooltip": true,
-        "tooltip-icon-size": 24
-      },
-      {
-        "type": "audio-out",
         "tooltip": true,
         "tooltip-icon-size": 24
       },
