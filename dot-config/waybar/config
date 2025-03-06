@@ -8,7 +8,7 @@
   "ipc": true,
   "margin-left": 10,
   "margin-right": 10,
-  "modules-left": ["cpu","temperature","memory","custom/media"],
+  "modules-left": ["power-profiles-daemon","cpu","temperature","memory","custom/media"],
   "modules-center": ["clock"],
   "modules-right": ["tray","battery","backlight","wireplumber","pulseaudio#microphone","privacy","custom/power"],
   "backlight": {
@@ -171,7 +171,7 @@
     "calendar": {
       "mode": "year",
       "mode-mon-col": 3,
-      "weeks-pos": "right",
+      "weeks-pos": "",
       "on-scroll": 1,
       "on-click-right": "mode",
       "format": {
@@ -181,6 +181,10 @@
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
         "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
       }
+    },
+    "actions": {
+	"on-scroll-up": "shift_up",
+	"on-scroll-down": "shift_down"
     }
   },
   "custom/power": {
@@ -266,5 +270,16 @@
         "max-length": 40,
         "interval": 10,
         "exec": "$HOME/.local/bin/scripts/media.sh 2> /dev/null"
+    },
+    "power-profiles-daemon": {
+	"format": "{icon}",
+	"tooltip-format": "Profile: {profile}\nDriver: {driver}",
+	"tooltip": true,
+	"format-icons": {
+	    "default": "",
+	    "performance": "",
+	    "balanced": "",
+	    "power-saver": ""
+      }
     }
 }
