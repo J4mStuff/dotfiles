@@ -7,3 +7,6 @@
 [submodule "dot-config/ranger/colorschemes/drakula"]
     path = dot-config/ranger/colorschemes/drakula
     url = https://github.com/dracula/ranger.git
+[submodule "dot-librewolf/n3k_profile/chrome"]
+	path = dot-librewolf/n3k_profile/chrome
+	url = https://github.com/soulhotel/FF-ULTIMA.git
