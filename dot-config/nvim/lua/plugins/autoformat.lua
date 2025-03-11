@@ -24,7 +24,6 @@ return {
       lua = { 'stylua' },
       c = { 'clang-format' },
       sh = { 'beautysh' },
-      py = { 'blue' },
       zig = { 'zig_fmt' },
       yaml = { 'yq' },
       json = { 'jq' },
