@@ -7,3 +7,6 @@ dot-config/deluge
 
 dot-config/thefuck/__pycache__
 dot-local/bin/Exiled-Exchange.AppImage
+dot-local/bin/Bambu_Studio.AppImage
+
+dot-config/easyeffects/autoload
