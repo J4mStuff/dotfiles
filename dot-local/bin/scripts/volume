@@ -22,7 +22,7 @@ get_volume_with_icon(){
 
 # Get Volume
 get_volume() {
-    volume=$(pamixer --sink $(get_sink) --get-volume)
+    volume=$(pamixer --sink "$(get_sink)" --get-volume)
     echo "$volume"
 }
 
@@ -47,20 +47,20 @@ notify_user() {
 
 # Increase Volume
 inc_volume() {
-    pamixer --sink $(get_sink) -i 5 && notify_user
+    pamixer --sink "$(get_sink)" -i 5 && notify_user
 }
 
 # Decrease Volume
 dec_volume() {
-    pamixer --sink $(get_sink) -d 5 && notify_user
+    pamixer --sink "$(get_sink)" -d 5 && notify_user
 }
 
 # Toggle Mute
 toggle_mute() {
-    if [ "$(pamixer --sink $(get_sink) --get-mute)" == "false" ]; then
-        pamixer --sink $(get_sink) -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/volume-mute.png" "Volume Switched OFF"
-    elif [ "$(pamixer --sink $(get_sink) --get-mute)" == "true" ]; then
-        pamixer --sink $(get_sink) -u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Volume Switched ON"
+    if [ "$(pamixer --sink "$(get_sink)" --get-mute)" == "false" ]; then
+        pamixer --sink "$(get_sink)" -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/volume-mute.png" "Volume Switched OFF"
+    elif [ "$(pamixer --sink "$(get_sink)" --get-mute)" == "true" ]; then
+        pamixer --sink "$(get_sink)" -u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Volume Switched ON"
     fi
 }
 
