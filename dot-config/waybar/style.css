@@ -1,129 +1,79 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
-
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
-
-/*
-Polar Night
-nord0  #2e3440
-nord1  #3b4252
-nord2  #434c5e
-nord3  #4c566a
-Snow Storm
-nord4  #d8dee9
-nord5  #e5e9f0
-nord6  #eceff4
-Frost
-nord7  #8fbcbb
-nord8  #88c0d0
-nord9  #81a1c1
-nord10 #5e81ac
-Aurora
-nord11 #bf616a
-nord12 #d08770
-nord13 #ebcb8b
-nord14 #a3be8c
-nord15 #b48ead
-*/
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
-
-/* Reset all styles */
-
 * {
-    color: #eceff4;
-    border: 0;
+    border: none;
     border-radius: 0;
-    padding: 0 0;
-    font-family: Mononoki Nerd Font;
-    font-size: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding-bottom: 2px;
+    font-family: "Mononoki Nerd Font";
+    font-size: 20px;
+    min-height: 0;
 }
 
 window#waybar {
-    background: rgba (0, 0, 0, 0.5);
-    border-radius: 20px 20px 20px 20px;
+    background: black;
+    opacity: 0.6;
+    color: #8fbcbb;
 }
+
+#window {
+    font-weight: bold;
+    font-family: "Mononoki";
+}
+
+/*
+#workspaces {
+    padding: 0 5px;
+}
+*/
 
 #workspaces button {
-    padding: 2px 0px;
-    border-bottom: 2px;
-    color: #eceff4;
-    border-color: #d8dee9;
-    border-style: solid;
-    margin-top: 2px;
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+    border-top: 2px solid transparent;
 }
 
-#workspaces button.active {
-    border-color: #81a1c1;
+#workspaces button.focused {
+    color: #c9545d;
+    border-top: 2px solid #c9545d;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
 }
 
 #clock,
 #battery,
 #cpu,
 #memory,
-#idle_inhibitor,
-#temperature,
-#custom-keyboard-layout,
-#backlight,
 #network,
 #pulseaudio,
+#custom-spotify,
 #tray,
-#window,
-#custom-launcher,
-#custom-power,
-#custom-updates,
-#custom-network_traffic,
-#custom-weather,
-#custom-media {
+#mode {
     padding: 0 3px;
-    border-bottom: 2px;
-    border-style: solid;
+    margin: 0 2px;
 }
-
-/* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
-
 
 #clock {
-    color: #a3be8c;
+    font-weight: bold;
 }
 
-#backlight {
-    color: #ebcb8b;
+#battery {}
+
+#battery icon {
+    color: red;
 }
 
-#battery {
-    color: #d8dee9;
-}
-
-#battery.charging {
-    color: #81a1c1;
-}
+#battery.charging {}
 
 @keyframes blink {
     to {
-        color: #4c566a;
-        background-color: #eceff4;
+        background-color: #ffffff;
+        color: black;
     }
 }
 
-#battery.critical:not(.charging) {
-    background: #bf616a;
-    color: #eceff4;
+#battery.warning:not(.charging) {
+    color: white;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -131,79 +81,22 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#cpu {
-    color: #a3be8c;
-}
+#cpu {}
 
-#memory {
-    color: #d3869b;
-}
+#memory {}
 
-#network.disabled {
-    color: #bf616a;
-}
-
-#network {
-    color: #a3be8c;
-}
+#network {}
 
 #network.disconnected {
-    color: #bf616a;
+    background: #f53c3c;
 }
 
-#pulseaudio {
-    color: #b48ead;
-}
+#pulseaudio {}
 
-#pulseaudio.muted {
-    color: #3b4252;
-}
+#pulseaudio.muted {}
 
-#temperature {
-    color: #8fbcbb;
-}
-
-#temperature.critical {
-    color: #bf616a;
-}
-
-#idle_inhibitor {
-    color: #ebcb8b;
+#custom-spotify {
+    color: rgb(102, 220, 105);
 }
 
 #tray {}
-
-#custom-launcher {
-    font-size: 20px;
-    background-image: url('/home/n3kk/.config/waybar/launcher.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-style: hidden;
-}
-
-#custom-power {
-    border-style: hidden;
-    margin-top: 2px;
-}
-
-#window {
-    border-style: hidden;
-    margin-top: 1px;
-}
-
-#custom-keyboard-layout {
-    color: #d08770;
-}
-
-#custom-network_traffic {
-    color: #d08770;
-}
-
-#privacy {
-    color: #d08770;
-}
-
-#custom-media {
-    color: rgb(102, 220, 105);
-}
