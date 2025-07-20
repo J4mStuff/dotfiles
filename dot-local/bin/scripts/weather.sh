@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-#
-for i in {1..5}
+
+for _ in {1..5}
 do
     text=$(curl -s "https://wttr.in/$1?format=1")
     if [[ $? == 0 ]]
