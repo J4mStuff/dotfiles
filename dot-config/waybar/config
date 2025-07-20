@@ -11,8 +11,8 @@
   "margin-top": 0,
   "margin-bottom": 0,
   "modules-left": ["power-profiles-daemon","hyprland/workspaces","cpu","temperature","memory"],
-  "modules-center": ["clock"],
-  "modules-right": ["custom/media","tray","battery","backlight","wireplumber","pulseaudio#microphone","privacy","custom/power"],
+  "modules-center": ["clock","custom/weather"],
+  "modules-right": ["custom/media","tray","battery","backlight","custom/pipewire","pulseaudio#microphone","privacy","custom/power"],
   "backlight": {
     "interval": 2,
     "align": 0,
@@ -30,11 +30,6 @@
     "on-scroll-up": "~/.local/bin/scripts/brightness --inc",
     "on-scroll-down": "~/.local/bin/scripts/brightness --dec",
     "smooth-scrolling-threshold": 1
-  },
-  "hyprland/window": {
-    "format": "{}",
-    "max-length": 360,
-    "separate-outputs": true
   },
   "cpu": {
     "format": " {usage}%",
@@ -69,11 +64,9 @@
   },
   "custom/weather": {
     "format": "{}",
-    "format-alt": "{alt}: {}",
-    "format-alt-click": "click",
     "interval": 3600,
     "return-type": "json",
-    "exec": "~/.local/bin/scripts/weather.sh",
+    "exec": "~/.local/bin/scripts/weather.sh Amsterdam+Netherlands",
     "exec-if": "ping wttr.in -c1"
   },
   "wlr/taskbar": {
@@ -181,18 +174,18 @@
     "tooltip": true,
     "tooltip-format": "Change wallpaper or style"
   },
-  "wireplumber": {
+  "custom/pipewire": {
     "format": "{icon} {volume} %",
-    "format-muted": " Mute",
+    "format-muted": "<U+F466> Mute",
     "on-click": "~/.local/bin/scripts/volume --toggle",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "~/.local/bin/scripts/volume --inc",
     "on-scroll-down": "~/.local/bin/scripts/volume --dec",
     "format-icons": [
-      "",
-      "",
-      ""
-    ]
+      "<U+F026>",
+      "<U+F027>",
+      "<U+F028>"
+    ],
   },
   "tray": {
     "icon-size": 15,
