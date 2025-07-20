@@ -4,6 +4,7 @@ zsh_plugins=${ZDOTDIR:-~}/.config/antidote/zsh-plugins
 
 ZSH_THEME="amuse"
 export EDITOR="nvim"
+export MANPAGER='nvim +Man!'
 
 ###########     TMUX     ########
 #open tmux session by default
