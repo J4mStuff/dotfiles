@@ -12,7 +12,7 @@
   "margin-bottom": 0,
   "modules-left": ["power-profiles-daemon","hyprland/workspaces","cpu","temperature","memory"],
   "modules-center": ["clock","custom/weather"],
-  "modules-right": ["custom/media","tray","battery","backlight","custom/pipewire","pulseaudio#microphone","privacy","custom/power"],
+  "modules-right": ["custom/media","tray","battery","backlight","custom/audio","privacy","custom/power"],
   "backlight": {
     "interval": 2,
     "align": 0,
@@ -174,18 +174,15 @@
     "tooltip": true,
     "tooltip-format": "Change wallpaper or style"
   },
-  "custom/pipewire": {
-    "format": "{icon} {volume} %",
-    "format-muted": "<U+F466> Mute",
-    "on-click": "~/.local/bin/scripts/volume --toggle",
+   "custom/audio": {
+    "tooltip": false,
+    "max-length": 10,
+    "exec": "$HOME/.local/bin/scripts/volume.sh --get-volume-with-icon",
+    "interval": 1,
+    "on-click": "~/.local/bin/scripts/volume.sh --toggle",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "~/.local/bin/scripts/volume --inc",
-    "on-scroll-down": "~/.local/bin/scripts/volume --dec",
-    "format-icons": [
-      "<U+F026>",
-      "<U+F027>",
-      "<U+F028>"
-    ],
+    "on-scroll-up": "~/.local/bin/scripts/volume.sh --inc",
+    "on-scroll-down": "~/.local/bin/scripts/volume.sh --dec"
   },
   "tray": {
     "icon-size": 15,
