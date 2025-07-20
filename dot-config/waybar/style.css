@@ -1,4 +1,5 @@
 * {
+    padding: 1px 5px;
     border: none;
     border-radius: 0;
     font-family: "Mononoki Nerd Font";
@@ -7,8 +8,8 @@
 }
 
 window#waybar {
-    background: black;
-    opacity: 0.6;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1.0;
     color: #8fbcbb;
 }
 
@@ -16,12 +17,6 @@ window#waybar {
     font-weight: bold;
     font-family: "Mononoki";
 }
-
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
 
 #workspaces button {
     padding: 0 5px;
@@ -46,8 +41,7 @@ window#waybar {
 #memory,
 #network,
 #pulseaudio,
-#custom-spotify,
-#tray,
+#custom-media,
 #mode {
     padding: 0 3px;
     margin: 0 2px;
