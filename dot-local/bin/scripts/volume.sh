@@ -30,15 +30,7 @@ get_volume_with_icon(){
 
 # Get Volume
 get_volume() {
-    WP_OUTPUT=$(wpctl get-volume "$(get_sink)")
-
-    if [[ $WP_OUTPUT =~ ^Volume:[[:blank:]]([0-9]+)\.([0-9]{2})([[:blank:]].MUTED.)?$ ]]; then
-        if [[ -n ${BASH_REMATCH[3]} ]]; then
-            printf "MUTE\n"
-        else
-            echo $((10#${BASH_REMATCH[1]}${BASH_REMATCH[2]}))
-        fi
-    fi
+    pamixer --get-volume "$(get_sink)"
 }
 
 
