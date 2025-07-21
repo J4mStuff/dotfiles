@@ -220,7 +220,7 @@
   "custom/media": {
         "format": " {}\t",
         "max-length": 70,
-        "interval": 2,
+        "interval": 1,
         "exec": "$HOME/.local/bin/scripts/media.sh 2> /dev/null",
 	"on-click": "playerctl --ignore-player firefox play-pause"
     },
