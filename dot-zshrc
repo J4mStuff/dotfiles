@@ -88,7 +88,7 @@ eval "$(zoxide init --cmd cd zsh)"
 ###########     Aliases     ########
 alias rd='ripdrag *'
 alias ls='eza --icons=always -1'
-alias update_all='sudo pacman -Syu;paru -Syu;flatpak update;antidote update;spicetify update; spicetify apply'
+alias update_all='sudo pacman -Syu;paru -Syu;flatpak update;antidote update'
 alias open='f() { xdg-open $1 >/dev/null &};f'
 alias poe2exchange="~/.local/bin/Exiled-Exchange.AppImage </dev/null &>/dev/null &; sleep 2; netstat -tunlp | grep exiled | tr \":\" \"\\t\" | awk '{x=\"librewolf localhost:\"\$5; system(x)}'"
 alias vencord_install='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
