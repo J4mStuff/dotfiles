@@ -1,4 +1,5 @@
 vim.g.mapleader = ' '
+vim.o.winborder = 'rounded'
 vim.g.maplocalleader = ' '
 vim.opt.number = true
 vim.opt.relativenumber = true
