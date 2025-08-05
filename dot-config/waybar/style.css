@@ -10,9 +10,9 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.6);
+    background: @background 60%;
     opacity: 1.0;
-    color: @color1;
+    color: @foreground;
 }
 
 #window {
@@ -28,7 +28,7 @@ window#waybar {
 
 #workspaces button.focused {
     color: @color3;
-    border-top: 2px solid #c9545d;
+    border-top: 2px solid @color4;
 }
 
 #custom-weather,
